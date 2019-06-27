@@ -1,15 +1,19 @@
 <?php
 
-function minusPower($a, $b)
+function power($a, $b)
 {
     $power = 1;
 
-    for($findPower = 1; $findPower <= -$b; $findPower++)
+    for($findPower = 1; $findPower <= $b; $findPower++)
     {
-        $power = 1 / ($a);
+        $power = $power * $a;
     }
+
+    if($b < 0)
+        {
+            return power(1 / $a, -$b);
+        }
 
     return $power;
 }
-
-echo minusPower(10, -1);
+echo power(10, -2);
