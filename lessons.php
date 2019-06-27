@@ -8,7 +8,9 @@
 function test($actual, $expected)
 {
     if ($actual != $expected) {
-        throw new Exception("Fail to assert {$expected} equals {$actual}");
+        echo("Test FAILED, expected {$expected} got {$actual}\n");
+    } else {
+        echo("Test ${expected} = ${actual} passed OK!\n");
     }
 }
 
@@ -33,4 +35,4 @@ test(minusPower(1, -2), 1 / 1 ** 2);
 test(minusPower(2, -3), 1 / 2 ** 3);
 test(minusPower(3, -4), 1 / 3 ** 4);
 test(minusPower(3, -6), 1 / 3 ** 6);
-test(minusPower(10, 10), 1 / 10 ** 10);
+test(minusPower(10, -10), 1 / 10 ** 10);
