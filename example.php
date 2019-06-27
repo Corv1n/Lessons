@@ -3,8 +3,8 @@
 
 function positive($int, $power)
 {
-    if ($int <= 0) {
-        throw new Exception("Only positive ints here");
+    if ($power <= 0) {
+        throw new Exception("Only positive power here");
     }
 
     $ret = 1;
@@ -18,8 +18,8 @@ function positive($int, $power)
 
 function negative($int, $power)
 {
-    if ($int >= 0) {
-        throw new Exception("Only negative ints here");
+    if ($power >= 0) {
+        throw new Exception("Only negative power here");
     }
 
     return 1 / positive($int, $power);
@@ -27,15 +27,15 @@ function negative($int, $power)
 
 function power($int, $power)
 {
-    if ($int == 0) {
+    if ($power == 0) {
         return 1;
     }
 
-    if ($int > 0) {
+    if ($power > 0) {
         return positive($int, $power);
     }
 
-    if ($int < 0) {
+    if ($power < 0) {
         return negative($int, $power);
     }
 }
