@@ -4,16 +4,18 @@ function power($a, $b)
 {
     $power = 1;
 
-    for($findPower = 1; $findPower <= $b; $findPower++)
-    {
+    //Если в $b подали минус 5, то итерации вообще не будет, нельзя инкремеемнтирую по одному сосчитать от 1 до минус 5
+    for ($findPower = 1; $findPower <= $b; $findPower++) {
         $power = $power * $a;
     }
 
-    if($b < 0)
-        {
-            return power(1 / $a, -$b);
-        }
+    //При условии что в b подали положительное число
+    // На этот момент в $power содержится уже число в какой-то степени, зачем вызывать еще раз саму себя?
+    if ($b < 0) {
+        return power(1 / $a, -$b);
+    }
 
     return $power;
 }
+
 echo power(10, -2);
