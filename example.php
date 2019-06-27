@@ -22,7 +22,7 @@ function negative($int, $power)
         throw new Exception("Only negative power here");
     }
 
-    return 1 / positive($int, $power);
+    return 1 / positive($int, abs($power));
 }
 
 function power($int, $power)
@@ -39,3 +39,7 @@ function power($int, $power)
         return negative($int, $power);
     }
 }
+
+var_dump(power(2,0));
+var_dump(power(2,5));
+var_dump(power(2,-5));
