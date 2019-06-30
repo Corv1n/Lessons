@@ -16,6 +16,7 @@ function positive($int, $power)
     return $ret;
 }
 
+
 function negative($int, $power)
 {
     if ($power >= 0) {
