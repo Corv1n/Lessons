@@ -1,20 +1,16 @@
 <?php
 
 
-function doubleString(string $input, int $repeat)
+function strings(string $input, int $doubles)
 {
-    $array = str_split($input);
     $result = "";
 
-    foreach ($array as $value) {
-        //$value == S
-        //str_repeat($value, $repeat) == "SS" (если $repeat = 2)
-
-        $result = $result . str_repeat($value, $repeat);
+    for ($i = 0; $i < strlen($input); $i++) {
+        $current = $input[$i];
+        $result = $result . str_repeat($current, $doubles);
     }
 
     return $result;
 }
 
-
-echo(doubleString("Stas", 3));
+strings("teaas", 2);

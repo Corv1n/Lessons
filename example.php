@@ -16,6 +16,7 @@ function positive($int, $power)
     return $ret;
 }
 
+
 function negative($int, $power)
 {
     if ($power >= 0) {
@@ -24,6 +25,8 @@ function negative($int, $power)
 
     return 1 / positive($int, abs($power));
 }
+
+
 
 function power($int, $power)
 {
