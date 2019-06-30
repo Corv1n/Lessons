@@ -1,0 +1,30 @@
+<?php
+
+function mul(int $var)
+{
+    $var = (string)$var;
+    $symbols = strlen($var);
+    return $symbols * $var;
+}
+
+echo mul(213);
+
+
+function sum($a, $b)
+{
+    return $a + $b;
+}
+
+function dec($a, $b)
+{
+    return $a - $b;
+}
+
+function test($a, $b)
+{
+    $c = 2; // ебаная мразь
+    return $a * $b;
+}
+
+$c = test(5, 2) + dec(1, 2);
+echo $c;
